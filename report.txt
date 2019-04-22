@@ -1,0 +1,56 @@
+/*
+ * Name: Junyi Wu, Chuhuan Huang
+ * filename: report.txt
+ * Date: 04/14/2019
+ * source of help: Class Slides, textbooks
+ */
+
+Questions for checkpoint:
+ 1. BST is significantly faster in insert.
+ 2. BST is slightly faster in find than BSA. However, with several trials,
+ these two seem to have similar runtime.
+ 3. BST is significantly faster during insertion because it has
+a much smaller complexity O(h) where h is the height of the tree.
+In the worst case it will be O(n)
+For BSA, it requires large amount of comparison and shifting, because each time
+an item is inserted, all elements after it need to be shifted.
+The shifting increases the complexity of the algorithm to O(n^2)
+Thus, BSA has a much longer runtime when inserting items.
+
+Questions for post-checkpoint:
+ 4. increases
+    K:5,Validation Error:0.095
+    K:10,Validation Error:0.102
+    K:15,Validation Error:0.108
+    K:20,Validation Error:0.109
+    K:25,Validation Error:0.123
+    K:30,Validation Error:0.13
+ 5. K = 5
+ as K: 3, Validation Error: 0.098
+    K: 4, Validation Error: 0.105
+ 6.
+kdt is around 150 times better than BruteForceKNN.
+ Training data size: 10000; Test data size: 10000; Dimension size: 2; K: 1;
+ Time taken for KD tree to find KNN: 65777551 milliseconds
+Training data size: 10000; Test data size: 10000; Dimension size: 2; K: 1;
+Time taken for brute force approach to find KNN: 10456634936 milliseconds
+ 7.
+ Training data size: 10000; Test data size: 10000; Dimension size: 100;
+ K: 1; Time taken for KD tree to find KNN: 278977409159 milliseconds
+Training data size: 10000; Test data size: 10000; Dimension size: 100;
+K: 1; Time taken for brute force approach to find KNN: 278166273810 milliseconds
+const int NUM_TRA = 10000; // number of random training data
+const int NUM_TEST = 10000; // number of random validation data
+const int NUM_DIM = 100;
+const int K = 1;
+8.
+increases in the num_dim will consume much more time than increases in
+k for kdtree
+Training data size: 10000; Test data size: 10000; Dimension size: 10;
+K: 1; Time taken for KD tree to find KNN: 11467441682 milliseconds
+Training data size: 10000; Test data size: 10000; Dimension size: 10;
+K: 1; Time taken for brute force approach to find KNN: 30116161782 milliseconds
+Training data size: 10000; Test data size: 10000; Dimension size: 2;
+K: 10; Time taken for KD tree to find KNN: 797374005 milliseconds
+Training data size: 10000; Test data size: 10000; Dimension size: 2;
+K: 10; Time taken for brute force approach to find KNN: 15015064723 milliseconds
